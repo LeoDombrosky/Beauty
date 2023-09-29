@@ -1,0 +1,580 @@
+.containers {
+    max-width: 940px;
+    margin: -30px auto;
+
+
+}
+
+/*BG HOME*/
+
+.bg-home {
+    position: relative;
+}
+
+.transparencia {
+    background-color: rgba(0, 0, 0, 0.144);
+    height: 100vh;
+}
+
+.bg-home:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.226), #090d11), url('../ASSETS/bg1.png');
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+//-------------------------------------------
+
+//-----HERO----------------
+
+.hero {
+
+    color: $white-normal;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1 {
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+
+    p {
+        text-align: center;
+        margin: 14px 0;
+    }
+
+}
+
+.button-contact {
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-light;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+    transition: 0.3s;
+    animation: tada;
+    animation-delay: 5s;
+    animation-duration: 3s;
+    
+    
+}
+
+.button-contact:hover {
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+}
+
+//----------------------
+
+//--HERO MOBILE-----------
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 150vh; //tamanho dos itens do hero na tela mobile
+
+        h1 {
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width:440px) {
+    .hero h1 {
+        font-size: 24px;
+
+    }
+}
+
+//--------------------------------------------------
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+section.module.parallax:after {
+    content: "";
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+}
+
+
+section.module.parallax-1 {
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.226), #090d1198), url("../Imagens/img2.jpg");
+}
+
+.anime{
+    animation: flash;
+    animation-delay: 5s;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+}
+
+section.module.parallax-2 {
+    background-image: url("../Imagens/img6.png");
+}
+
+
+section.module.parallax h1 {
+    color: #FFF;
+    text-align: center;
+    font-size: 78px;
+    z-index: 50;
+    text-transform: uppercase;
+}
+
+
+section.module.parallax h1{
+    color: #FFF;
+    text-align: center;
+    font-size: 78px;
+    z-index: 50;
+    text-transform: uppercase;
+  }
+    
+  .wrapper{
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  section.module p{
+    margin-bottom: 40px;
+  }
+  
+  section.module:last-child{
+    margin-bottom: 0;
+  }
+  
+  section.module h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+  
+  section.module.content{
+   padding: 40px 0;
+   background: #ece7d5; 
+  }
+  
+  @media all and (max-width: 820px) {
+    section.module h2 {
+      font-size: 32px;
+    }
+    .module h2, p{
+      padding: 0 8px;
+    }
+  
+    .container{
+      margin:0;
+      padding:0;
+    }
+  
+    section.module.parallax h1 {
+      font-size: 36px;
+    }
+  }
+
+
+//-------ABOUT------------
+.about {
+    background-color: $secondary-normal;
+    transition: 1s;
+    overflow: hidden;
+    color: $white-normal;
+    animation: fade-right;
+    animation-delay: 500;
+
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 144px;
+    padding: 34px 14px 64px 14px;
+
+    img {
+        max-width: 670px;
+        animation: pulse;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.about-content div {
+    //faz com que as div do "SOBRE" dividam os espacos do layout de maneira igual./
+    flex: 1;
+}
+
+.about-description {
+    height: 100vh;
+}
+
+.about-description {
+    h2 {
+        font-size: 38px;
+        margin-top: 120px;
+        margin-bottom: 5px;
+        animation: lightSpeedInRight;
+        animation-duration: 3s;
+        transition: 3s;
+        
+    }
+
+    p {
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width:570px) {
+
+    //quebra o "sobre", para tela mobile.
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content p {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+//----------------------------------------
+//-------SERVICES---------------------
+.services {
+
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+    height: 100vh;
+}
+
+.services-content h2 {
+    text-transform: uppercase; //deixa lestras maiusculas.
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.services-content p {
+    line-height: 150%; //altura entre as linhas
+    margin-bottom: 14px;
+    text-align: center;
+    justify-content: center;
+    max-width: 740px;
+}
+
+/* ----------------MENU MOBILE SERVIÇOS*/
+@media screen and (max-width:768px) {
+    .services{
+        position: relative;
+        top: 0px;
+
+        border: 2px solid blue;
+        height: 210vh !important;
+    }
+    .services-content{
+        position: absolute;
+        top: 3%;
+        border: 2px solid rgb(64, 228, 49);
+        
+    }
+
+    .services-content h2 {
+        border:red;
+        text-transform: uppercase; //deixa lestras maiusculas.
+        text-align: center;
+        font-size: 28px;
+        
+    }
+    .services-content p {
+        line-height: 150%; //altura entre as linhas
+        text-align: center;
+        justify-content: center;
+        max-width: 740px;
+    }
+
+}
+
+.haircuts {
+
+    display: flex;
+    align-items: center;
+    justify-content: center; //alinhamento do itens na horizontal e vertical
+    gap: 14px; //espacos entre as imagens
+    padding: 0 44px 34px 44px;
+
+}
+
+.haircut {
+    margin-top: 50px;
+    flex: 1; // para as divs buscarem dividir por igual o espaco dentro da div.
+    display: flex; //para permitir direcionar as divs.
+    flex-direction: column; //direcao do flex, neste caso vertical - column.
+    background-color: $white-normal;
+    border-radius: 8px; //bordas arredondadas.
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45); //sombra nas divs.
+    overflow: hidden; //esconde oque passar para fora do espaco definido para a div.
+
+    img {
+        width: 100%;
+        max-width: 255px;
+        transition: transform 0.2s; //tempo da transicao do efeito das fotos
+    }
+}
+
+.haircut img:hover {
+    transform: scale(1.2);
+    z-index: 1; //coloca o item em primeiro plano
+}
+
+.haircut-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; //espaco entre titulo e o preco
+    padding: 14px;
+    background-color: $white-normal;
+    z-index: 99; //coloca o texto das fotos 99 camadas acima, para o efeito da foto nao sobrepor o titulo e preco.
+}
+
+.haircut-info button {
+    color: $white-normal;
+    background-color: $red-normal;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 0;
+    cursor: default; //mudar o "default" para "pointer", quando adicional funcao ao botao.
+
+}
+
+.produtos{
+    width: 100%;
+    
+}
+
+.produto {
+    color: $white-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+    height: 150px;
+    
+}
+
+.produto h2 {
+    text-transform: uppercase; //deixa lestras maiusculas.
+    color: $white-normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.produto p {
+
+    color: $white-normal;
+    line-height: 150%; //altura entre as linhas
+    margin-top: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+    justify-content: center;
+    max-width: 740px;
+}
+
+.serv {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    color: $secondary-normal;
+    background-color: rgb(243, 189, 211);
+    margin-bottom: 10px;
+
+}
+
+iframe {
+    //MAPA DO GOOGLE
+    display: flex;
+    width: 98%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width:768px) {
+
+    //adaptcao para mobile.
+    .haircuts {
+        flex-direction: column;
+    }
+
+    .haircut img {
+        width: 740px;
+    }
+}
+
+
+.transparencia2 {
+    background-color: black;
+
+}
+
+.lastlogo {
+    animation: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: 2s;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0px;
+    gap: 24px;
+    color: $white-normal;
+
+
+}
+.footer p{
+    margin-bottom: -40px;
+}
+.footer span{
+    cursor: pointer;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+    color: $white-normal;
+}
+
+@media screen and (max-width: 768px) {
+    .footer p {
+        flex-direction: column;
+        font-size: 10px;
+
+
+    }
+}
+
+.btn-zap {
+
+    position: fixed;
+    bottom: 44px;
+    right: 24px;
+    z-index: 99;
+
+    img {
+        max-width: 44px;
+        transition: transform 0.4s;
+        position: fixed;
+        bottom: 55px;
+        right: 14px;
+
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+.btn-zap .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 180px;
+    top: -10px;
+    left: -280px;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+}
+
+.btn-zap:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:768px) {
+
+    btn-zap {
+        img {
+            max-width: 44px !important;
+           
+           
+        }
+
+    }
+}
