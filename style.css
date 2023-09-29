@@ -319,7 +319,7 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.226), #090d11), url("../ASSETS/bg1.png");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.226), #090d11), url(ASSETS/bg1.png);
   left: 0;
   top: 0;
   width: 100%;
@@ -436,7 +436,7 @@ section.module.parallax:after {
 }
 
 section.module.parallax-1 {
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.226), rgba(9, 13, 17, 0.5960784314)), url("../Imagens/img2.jpg");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.226), rgba(9, 13, 17, 0.5960784314)), url(Imagens/img2.jpg);
 }
 
 .anime {
@@ -451,7 +451,7 @@ section.module.parallax-1 {
 }
 
 section.module.parallax-2 {
-  background-image: url("../Imagens/img6.png");
+  background-image: url(Imagens/img6.png);
 }
 
 section.module.parallax h1 {
